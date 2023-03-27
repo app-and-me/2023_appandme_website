@@ -1,0 +1,130 @@
+::-webkit-scrollbar {
+    display: none;
+  }
+  body{
+    margin: 0;
+
+  }
+  .margin {
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 22mm;
+    margin-bottom: 2%;
+  }
+  
+  #title_hr {
+    width: 107%;
+    height: 3px;
+    border-bottom: 0px;
+    border-top: 0px;
+    margin-bottom: 5%;
+    background-color: #FF6686;
+  } 
+
+  .margin .wrap {
+    width: 120%;
+
+  }
+
+  .margin .wrap article {
+    float: left;
+    margin-right: 5vw;
+    margin-bottom: 5%;
+  }
+
+  .margin .wrap article .pic {
+    position: relative;
+    width: 16vw;
+    height: 16vh;
+
+    min-width: 240px;
+
+    margin-bottom: 15px;
+
+    background: #333;
+    
+    overflow: hidden;
+  }
+
+  .margin .wrap article hr {
+    width: 49px;
+    height: 0px;
+    left: 1060px;
+    top: 757px;
+
+    border: 2px solid #FF6686;
+  }
+  .margin .wrap article .pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+  .margin .wrap article .subtitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #0F0F0F;
+  }
+
+  .margin .wrap article p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  @media screen and (max-width:991px) {
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 22mm;
+      margin-bottom: 2%;
+     }
+     .margin .wrap article hr {
+      width: 49px;
+      height: 0px;
+      left: 1060px;
+      top: 757px;
+      border: 2px solid #FF6686;
+      margin-left: 38%;
+    }
+  }
+  @media screen and (max-width:479px) {
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1.5em;
+      line-height: 22mm;
+      margin-bottom: 2%;
+     }
+     .margin .wrap article hr {
+      width: 49px;
+      height: 0px;
+      left: 1060px;
+      top: 757px;
+      border: 2px solid #FF6686;
+      margin-left: 38%;
+    }
+  }

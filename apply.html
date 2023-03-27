@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="img/logo.png" />
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/apply.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <title>App & Me</title>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <a class="logo-a" href="index.html">APP&ME</a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="members_10th.html">부원소개</a></li>
+                <li><a style="color: #FF6686;" href="apply.html">지원하기</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="activities.html">활동기록</a></li>
+            </ul>
+            <ul class="menus">
+                <li><a href="https://asked.kr/AppandMe"><img src="img/ask.png" alt="ask"></a></li>
+                <li><a href="https://instagram.com/app_and_me?igshid=NTdlMDg3MTY="><img class="ins" src="img/instagram.png" alt="instagram"></a></li>
+            </ul>
+            <a href="#" class="navbar_toogle">
+                <i class='bx bx-menu'></i>
+            </a>
+        </nav>
+    </header>
+    <div class="margin">
+        <div class="title">지원하기</div>
+        <hr id="title_hr">
+    </div>
+    <div class="margin">
+        <center>
+            <div class="box">
+                    <form method="post" action="apply.php">
+                        <table width="95%" class="list-table">
+                            <tbody>
+                                <tr class="content">
+                                    <td>학번</td>
+                                    <td><input type="text" id="hakbun" name="hakbun" placeholder="1401"></td>
+                                </tr>
+                                <tr class="content">
+                                    <td>이름</td>
+                                    <td><input type="text" id="name" name="name" placeholder="김미림"></td>
+                                </tr>
+                                <tr class="content">
+                                    <td>전화번호</td>
+                                    <td><input type="text" id="tel" name="tel" placeholder="01012345678"></td>
+                                </tr>
+                                <tr class="content">
+                                    <td>나를 5글자로 표현한다면?</td>
+                                    <td><input type="text" id="fiveme" name="fiveme" maxlength="5"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr class="content">
+                                    <td>지원동기</td>
+                                    <td colspan="2">
+                                        <textarea name="content" id="text"  rows="6" placeholder="내용을 입력해주세요(200자 이내)"></textarea>
+                                        <div id="text_cnt">(0/200)</div>
+                                    </td>
+                                </tr>
+                                <tr class="content">
+                                    <td>통학생/기숙사생</td>
+                                    <td>
+                                        <select name="region">
+                                            <option value="기본">선택해주세요!</option>
+                                            <option value="통학생">통학생</option>
+                                            <option value="기숙사생">기숙사생</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="submit" class="apply" value="지원하기" onclick="" style="cursor: pointer;">
+                    </form>
+            </div>
+        </center>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        // 글자수 제한 체크
+        $(document).ready(function() {
+            $('textarea').on('input', function() {
+                var maxLength = 200;
+                var length = $(this).val().length;
+                
+                if (length > maxLength) {
+                $(this).val($(this).val().substring(0, maxLength));
+                alert('글자 수는 200자 이하여야 합니다.');
+                }
+            });
+            });
+            
+        // 실시간 글자수 체크
+        $(document).ready(function() {
+            $('#text').on('keyup', function() {
+                $('#text_cnt').html("("+$(this).val().length+" / 200)");
+        
+                if($(this).val().length > 200) {
+                    $(this).val($(this).val().substring(0, 200));
+                    $('#text_cnt').html("(200 / 200)");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
